@@ -1,0 +1,27 @@
+version: '3'
+services: 
+  ovaledge:
+    image: oeapp
+    restart: unless-stopped
+    environment:
+      - DRIVERCLASSNAME=com.mysql.jdbc.Driver
+      - OVALEDGE_MYSQL_URL=jdbc:mysql://database-2.cwzqfk1qxzqk.ap-south-1.rds.amazonaws.com:3306/ovaledgedb?useSSL=false
+      - OVALEDGE_MYSQL_USER=admin
+      - OVALEDGE_MYSQL_PWORD=admin123
+      - OVALEDGE_ENCRYPT_DECRYPT_KEY=ovaledge2021
+      - ENTITY_BASE_URL=http://13.235.80.127:9090/ovaledge
+      - ENTITY_BASE_ISLB=false
+      - ENTITY_BASE_PROTOCOL=https
+      - ENTITY_BASE_HOST=fg.ovaledge.net
+      - ENTITY_BASE_PORT=443
+      - ENTITY_BASE_CONTEXTPATH=/ovaledge
+      - ENTITY_BASE_PORT_INURL=false
+      - OVALEDGE_ENVT_VAR=
+      - ext.properties.dir=/usr/local/tomcat/conf/
+    ports:
+      - 8080:8080
+    #MYSQL_DATABASE: "${OVALEDGE_MYSQL_URL}"
+    #MYSQL_USER: "${OVALEDGE_MYSQL_USER}"
+    #MYSQL_PASSWORD: "${OVALEDGE_MYSQL_PWORD}"
+    # ports:
+    #- 8080:8080
