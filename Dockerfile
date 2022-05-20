@@ -13,7 +13,7 @@ RUN apk add --no-cache \
         awscli \
     && rm -rf /var/cache/apk/*
 
-RUN wget https://jenkins-ovaledge-s3.s3.amazonaws.com/jenkins-5.3-s3/500/ovaledge.war
+RUN wget https://jenkins-ovaledge-s3.s3.amazonaws.com/jenkins-5.3-s3/488/ovaledge.war
 
 RUN mkdir /root/temp
 
