@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: chmod 777 run.sh && docker build . --file Dockerfile -t ovaledge.jfrog.io/ovaledge-docker-local/ovaledge:mcktest30 && docker login ovaledge.jfrog.io -u shivaprasad.mergu@ovaledge.com -p 0valEdge! && docker push ovaledge.jfrog.io/ovaledge-docker-local/ovaledge:mcktest30
+      run: chmod 777 run.sh && docker build . --file Dockerfile -t ovaledge.jfrog.io/ovaledge-docker-local/ovaledge:31 && docker login ovaledge.jfrog.io -u shivaprasad.mergu@ovaledge.com -p 0valEdge! && docker push ovaledge.jfrog.io/ovaledge-docker-local/ovaledge:31
